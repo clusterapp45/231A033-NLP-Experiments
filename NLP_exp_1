@@ -1,1 +1,119 @@
+Project Title
+Cyberbullying and Toxic Comment Detection Using Natural Language Processing (NLP)
+1. Problem Description
+With the rapid growth of social media and online communication platforms, users are exposed to a large number of comments every day. Some comments contain abusive language, harassment, threats, or other harmful content that can negatively affect users and create an unsafe online environment. Manually reviewing every comment is time-consuming. A Cyberbullying and Toxic Comment Detection System aims to address this problem by analyzing comment text and classifying it as toxic or non-toxic using Natural Language Processing (NLP) and machine learning. This can help identify potentially harmful comments for further review.
 
+2. Objectives
+The objectives of the project are:
+- To develop an NLP-based application that analyzes online comments.
+- To classify comments as toxic or non-toxic.
+- To identify potentially abusive or harmful language.
+- To reduce the effort required for initial comment screening.
+- To demonstrate the practical application of Natural Language Processing and machine learning in online safety.
+
+3. Scope
+Included:
+- Detection of toxic comments written in English.
+- Input of comments through a user interface or text input.
+- Text preprocessing and feature extraction.
+- Classification using a machine-learning model.
+- Display of the predicted class through a simple user interface.
+- Evaluation using appropriate classification metrics.
+Excluded:
+- Guaranteed detection of every cyberbullying incident.
+- Detection of harmful content in images, audio, or video.
+- Automatic removal of comments from social media.
+- Multilingual detection unless specifically implemented.
+- Determining a person's intention or making final moderation decisions without human review.
+
+4. Target Audience
+The proposed system is intended for:
+- Social media users
+- Students and teachers
+- Online community moderators
+- Website administrators
+- Educational institutions
+- Online platforms seeking to identify potentially harmful comments
+
+5. Data Requirements
+The project requires a labelled collection of toxic and non-toxic comments for training, testing, and evaluation.
+
+Possible Data Sources:
+- Jigsaw Toxic Comment Classification Dataset
+- Kaggle toxic comment datasets
+- Publicly available cyberbullying detection datasets
+- Manually labelled comment samples
+Preprocessing Requirements:
+- Remove unnecessary HTML tags and unwanted characters.
+- Convert text to lowercase where appropriate.
+- Remove unnecessary whitespace.
+- Handle URLs and user mentions where required.
+- Tokenization.
+- Stop-word removal where suitable.
+- Stemming or lemmatization where appropriate.
+- Convert text into numerical features using TF-IDF or word embeddings.
+
+6. Challenges and Assumptions
+Challenges:
+- Identifying abusive and harmful language accurately.
+- Handling spelling mistakes, slang, and informal writing.
+- Understanding sarcasm and context-dependent comments.
+- Avoiding bias caused by an imbalanced dataset.
+- Reducing false positives and false negatives.
+- Detecting new forms of toxic language not present in the training data.
+Assumptions:
+- The input comments are primarily written in English.
+- The dataset contains suitable labels for training and testing.
+- The training data represents a reasonable variety of online comments.
+- The system provides predictions rather than guaranteed judgments.
+- Human review may be necessary for ambiguous or sensitive comments.
+
+7. Evaluation Metrics
+The performance of the toxic comment detection system can be evaluated using:
+- Accuracy
+- Precision
+- Recall
+- F1-Score
+- Confusion Matrix
+- Classification Report
+- Prediction and processing time
+
+8. Tools and Techniques
+Programming Language
+
+* Python
+
+NLP Techniques
+- Text Preprocessing
+- Tokenization
+- Text Normalization
+- Stop-word Removal (where suitable)
+- TF-IDF Vectorization
+- Text Classification
+Machine Learning / Deep Learning
+- Logistic Regression
+- Multinomial Naive Bayes
+- Support Vector Machine (SVM)
+- Transformer-based models (optional)
+- Scikit-learn
+- NLTK (optional)
+Software Tools
+- Flask (Backend, if implemented)
+- HTML/CSS/JavaScript (Frontend, if implemented)
+- Visual Studio Code
+- Jupyter Notebook or Google Colab
+- Git & GitHub
+
+9. Impact and Significance
+The proposed system can help identify potentially harmful online comments more efficiently and support safer online communication. It can reduce the effort required for initial comment screening and assist moderators in deciding which comments may need further attention. The project also demonstrates the practical application of AI, NLP, and machine learning in addressing cyberbullying and online toxicity. Since automated predictions may be incorrect or influenced by language context, human review remains important.
+
+10. Deliverables
+The project will deliver:
+- A Cyberbullying and Toxic Comment Detection application or model.
+- A trained or integrated text classification model.
+- Text preprocessing and feature extraction functionality.
+- Predictions indicating toxic or non-toxic comments.
+- Evaluation results using appropriate classification metrics.
+- A simple user interface, if implemented.
+- Source code and project documentation.
+- A project report covering the methodology, implementation, results, and evaluation.
