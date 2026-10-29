@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ClearComment | Toxic Comment Detection</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="shell">
+    <nav class="topbar">
+      <div class="brand"><span class="brand-icon">C</span> ClearComment</div>
+      <span class="tag">NLP MINI PROJECT</span>
+    </nav>
+
+    <section class="hero">
+      <div class="eyebrow"><span class="dot"></span> AI-POWERED COMMENT CHECK</div>
+      <h1>Make online spaces<br><span>more respectful.</span></h1>
+      <p class="intro">Check a comment for potentially toxic language using Natural Language Processing and machine learning.</p>
+
+      <form method="POST" class="checker">
+        <label for="comment">Enter a comment</label>
+        <textarea id="comment" name="comment" rows="5" maxlength="2000" placeholder="Type or paste a comment here..." required>{{ comment }}</textarea>
+        <div class="form-footer">
+          <span class="hint">English text · Up to 2,000 characters</span>
+          <button type="submit">Analyze comment <span aria-hidden="true">→</span></button>
+        </div>
+      </form>
+
+      {% if error %}
+      <div class="result error"><strong>Check needed</strong><p>{{ error }}</p></div>
+      {% endif %}
+      {% if prediction %}
+      <div class="result {% if prediction == 'Toxic' %}toxic{% else %}safe{% endif %}">
+        <div class="result-symbol">{% if prediction == 'Toxic' %}⚠{% else %}✓{% endif %}</div>
+        <div><span class="result-label">MODEL PREDICTION</span><h2>{{ prediction }}</h2>
+        <p>{% if prediction == 'Toxic' %}This comment may contain harmful language. Please review it in context.{% else %}The model did not flag this comment as toxic. This does not guarantee it is harmless.{% endif %}</p></div>
+      </div>
+      {% endif %}
+    </section>
+
+    <section class="steps">
+      <div><span>01</span><h3>Text processing</h3><p>The comment is normalized for analysis.</p></div>
+      <div><span>02</span><h3>TF-IDF features</h3><p>Text is converted into numerical features.</p></div>
+      <div><span>03</span><h3>Classification</h3><p>A trained model predicts a label.</p></div>
+    </section>
+    <footer>Built for an NLP mini project · Predictions can be wrong; human review matters.</footer>
+  </main>
+</body>
+</html>
